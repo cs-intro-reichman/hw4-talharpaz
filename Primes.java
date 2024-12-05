@@ -12,7 +12,7 @@ public class Primes {
     }
  
     public static int printPrimeNumbers (boolean [] arr){
-        int i = 0;
+        int i = 2;
         int count = 0;
         while (i < arr.length) {
             if ( arr[i] == true){
@@ -25,9 +25,9 @@ public class Primes {
     }
     public static boolean [] array (int n){
          
-        boolean [] nArray = new boolean[n];
-        int i = 0;
-        while (i < n) {
+        boolean [] nArray = new boolean[n + 1];
+        int i = 2;
+        while (i < nArray.length) {
             if ( i !=0 && i != 1){
              nArray[i] =true;
               
@@ -40,9 +40,9 @@ public class Primes {
     public static boolean [] changeArray ( boolean [] arr, int n){
 
         
-        for ( int i=2; i<=n; i++) {
+        for ( int i=2; i<= Math.sqrt(n); i++) {
              if ( isPrime(i) == true) {
-             int num = i +1 ;
+             int num = i * i ;
         
         while (num < n) {
             if ( num%i == 0 ) arr[num] = false;
