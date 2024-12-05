@@ -5,19 +5,19 @@ public class Primes {
 
         System.out.println("Prime numbers up to " + n + ":");
          int count = printPrimeNumbers(array(n));
-         double percentage = ((double)count / n) * 100;
+         double percentage = ((double) count / (n )) * 100;
         System.out.println("There are " + count + " primes between 2 and " + n + " (" + (int)percentage + "% are primes)");
        
 
     }
  
-    public static int printPrimeNumbers (boolean [] arr){
+    public static int printPrimeNumbers(boolean[] arr) {
         int i = 2;
         int count = 0;
         while (i < arr.length) {
-            if ( arr[i] == true){
-                count ++;
-                System.out.println(i);
+            if (arr[i] == true) {
+                count++;
+                System.out.println(i); 
             }
             i++;
         }
@@ -44,10 +44,11 @@ public class Primes {
              if ( isPrime(i) == true) {
              int num = i * i ;
         
-        while (num < n) {
-            if ( num%i == 0 ) arr[num] = false;
-            num = num + 1;
-        }
+           
+             while (num <= n) {
+                 arr[num] = false;
+                 num += i; 
+             }
        
      }
     
