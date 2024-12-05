@@ -20,7 +20,7 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-        String newString = " ";
+        String newString = "";
 
         for ( int i =0; i < str.length(); i++ ){
           
