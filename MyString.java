@@ -1,3 +1,5 @@
+
+
 public class MyString {
     public static void main(String[] args) {
         System.out.println("Testing lowercase:");
@@ -18,13 +20,44 @@ public class MyString {
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-        // Replace the following statement with your code
-        return null;
+        String newString = "";
+
+        for ( int i =0; i < str.length(); i++ ){
+          
+            char c = str.charAt(i);
+          
+            if ( c >= 'A' && c <= 'Z'){
+                c = (char) (c + 32);
+                
+
+            }
+            newString += c;
+        }
+
+
+        return newString;
     }
 
-    /** If str1 contains str2, returns true; otherwise returns false. */
+    /** If str1 contains str2, returns true; otherwise returns false. use breaks */ 
     public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
+        if (str2.length() > str1.length()) {
+            return false;
+        }
+           
+        for (int i = 0; i<= str1.length() - str2.length(); i++){ 
+            boolean isContains = true;
+            for (int j = 0; j< str2.length() ; j++){
+            if( str1.charAt(i+j) != str2.charAt(j) ){
+                isContains = false;
+                break;
+            }
+            
+            }
+            if (isContains) return true;
+         }
+         
+            
+  
         return false;
     }
 }
